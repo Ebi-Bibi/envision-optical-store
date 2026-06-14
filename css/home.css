@@ -1,0 +1,95 @@
+.home-page section {
+    padding: 20px;
+}
+
+.home-page .content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.home-page .content img {
+    width: 450px;
+    height: auto;
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+
+.home-page #head {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.home-page #SUMMER_COLLECTION {
+    padding-left: 50px;
+    font-size: 25px;
+    margin-bottom: -24px;
+}
+
+.home-page #GLASS_COLLECTION {
+    padding-left: 50px;
+    font-size: 25px;
+    margin-bottom: -3px;
+}
+
+.home-page .tagline {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.home-page .sub-tagline {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .home-page .content {
+        gap: 30px;
+    }
+
+    .home-page .content img {
+        width: min(44vw, 450px);
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .home-page section {
+        padding: 16px 20px;
+    }
+
+    .home-page .content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .home-page .content img {
+        width: min(100%, 420px);
+        margin: 0 auto;
+    }
+
+    .home-page #SUMMER_COLLECTION,
+    .home-page #GLASS_COLLECTION {
+        padding-left: 20px;
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+
+    .home-page .tagline,
+    .home-page .sub-tagline {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .home-page #head {
+        font-size: 13px;
+    }
+
+    .home-page #SUMMER_COLLECTION,
+    .home-page #GLASS_COLLECTION {
+        font-size: 20px;
+    }
+}

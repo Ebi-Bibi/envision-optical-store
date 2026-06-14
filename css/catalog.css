@@ -1,0 +1,153 @@
+.sunglasses-page main,
+.glasses-page main {
+    padding: 40px 50px 60px;
+}
+
+.sunglasses-page .hero,
+.glasses-page .hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.sunglasses-page .hero-copy h2,
+.glasses-page .hero-copy h2 {
+    margin: 0 0 16px;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.sunglasses-page .hero-copy p,
+.glasses-page .hero-copy p {
+    max-width: 440px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.sunglasses-page .hero-image img,
+.glasses-page .hero-image img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 24px;
+    display: block;
+    margin-left: auto;
+}
+
+.sunglasses-page .section-title,
+.glasses-page .section-title {
+    margin: 24px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card {
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.sunglasses-page .section-title2,
+.glasses-page .section-title2 {
+    margin: 70px 24px 0;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.sunglasses-page .product-grid,
+.glasses-page .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin: 20px;
+}
+
+.sunglasses-page .card img,
+.glasses-page .card img {
+    width: 100%;
+    height: 260px;
+    object-fit: scale-down;
+    display: block;
+}
+
+.sunglasses-page .card-body,
+.glasses-page .card-body {
+    padding: 40px;
+}
+
+.sunglasses-page .card-body h3,
+.glasses-page .card-body h3 {
+    margin: 1px;
+    font-size: 20px;
+}
+
+.sunglasses-page .card-body p,
+.glasses-page .card-body p {
+    margin: 8px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.sunglasses-page .price,
+.glasses-page .price {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    .sunglasses-page main,
+    .glasses-page main {
+        padding: 28px 20px 40px;
+    }
+
+    .sunglasses-page .hero,
+    .glasses-page .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .sunglasses-page .hero-copy h2,
+    .glasses-page .hero-copy h2 {
+        font-size: clamp(34px, 8vw, 52px);
+    }
+
+    .sunglasses-page .hero-copy p,
+    .glasses-page .hero-copy p {
+        max-width: none;
+    }
+
+    .sunglasses-page .section-title,
+    .glasses-page .section-title,
+    .sunglasses-page .section-title2,
+    .glasses-page .section-title2 {
+        margin: 24px 0 18px;
+        font-size: 24px;
+    }
+
+    .sunglasses-page .product-grid,
+    .glasses-page .product-grid {
+        grid-template-columns: 1fr;
+        margin: 0;
+        gap: 18px;
+    }
+
+    .sunglasses-page .card-body,
+    .glasses-page .card-body {
+        padding: 28px 24px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .sunglasses-page .card img,
+    .glasses-page .card img {
+        height: 220px;
+    }
+}

@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Golos Text';
+    src: url('../asset/Golos_Text/static/GolosText-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Golos Text';
+    src: url('../asset/Golos_Text/static/GolosText-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: #fff;
+    font-family: 'Golos Text', sans-serif;
+    font-size: 17px;
+    background: linear-gradient(0deg, #135299 20.73%, #111846 50.46%, #0a0f15 75.67%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px;
+    background-color: #000;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 40px;
+    width: 260px;
+    padding: 20px;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+h1 {
+    margin: 0;
+}
+
+h1 img,
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 40px;
+    gap: 40px;
+    font-size: 13px;
+}
+
+@media (max-width: 1200px) {
+    header {
+        padding: 10px 20px;
+        gap: 20px;
+    }
+
+    .nav-left,
+    .nav-right {
+        width: auto;
+        gap: 24px;
+        padding: 12px 0;
+    }
+
+    footer {
+        padding: 16px 24px 24px;
+        gap: 18px 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 14px 18px;
+    }
+
+    .nav-left,
+    .nav-right {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px 18px;
+        font-size: 12px;
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+        padding: 18px 20px 24px;
+        gap: 12px 24px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px 14px;
+    }
+
+    h1 {
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 img {
+        width: 150px;
+    }
+
+    .nav-left,
+    .nav-right {
+        font-size: 11px;
+        padding: 0;
+        width: auto;
+        display: flex;
+        gap: 10px 14px;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+}

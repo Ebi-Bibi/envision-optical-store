@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>enVision Cart</title>
+        <link rel="icon" type="image/svg" href="./asset/iconEN.svg">
+        <link rel="stylesheet" href="./css/shared.css">
+        <link rel="stylesheet" href="./css/cart.css">
+    </head>
+
+    <body class="cart-page">
+        <header>
+            <nav class="nav-left">
+                <a href="./sunglasses.html">SUNGLASSES</a>
+                <a href="./glasses.html">GLASSES</a>
+                <a href="./explore.html">EXPLORE</a>
+            </nav>
+
+            <h1><a href="./index.html"><img src="./asset/brand.png" alt="brand" width="200"></a></h1>
+
+            <nav class="nav-right">
+                <a href="./voucher.html">VOUCHER</a>
+                <a href="./cart.html">CART</a>
+            </nav>
+        </header>
+
+        <main class="cart-shell">
+            <section class="cart-layout">
+                <div class="cart-products">
+                    <article class="cart-item" aria-label="Cart item">
+                        <div class="cart-item__image">
+                            <img src="./asset/ANNIE.png" alt="ANNIE ES04 sunglasses">
+                        </div>
+
+                        <div class="cart-item__details">
+                            <h2>ANNIE ES04</h2>
+                            <p class="cart-item__price">Rp 600,000</p>
+                            <p class="cart-item__color">Beige/Light</p>
+
+                            <div class="cart-item__qty">
+                                <label for="cart-quantity">Quantity</label>
+                                <select id="cart-quantity" name="cart-quantity">
+                                    <option selected>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+
+                            <button type="button" class="cart-remove">Remove</button>
+                        </div>
+                    </article>
+
+                    <section class="cart-addon" aria-label="Suggested add on">
+                        <p class="cart-addon__label">ADD ON +</p>
+
+                        <div class="cart-addon__card">
+                            <div class="cart-addon__image">
+                                <img src="./asset/MINNI.png" alt="MINNI ES02 sunglasses">
+                            </div>
+
+                            <div class="cart-addon__details">
+                                <div>
+                                    <h3>MINNI ES02</h3>
+                                    <p>Rp 600,000</p>
+                                </div>
+
+                                <button type="button" class="cart-addon__button">Add to +</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="cart-summary" aria-label="Order summary">
+                    <div class="cart-summary__rows">
+                        <p><span>Subtotal</span><span>Rp 600,000</span></p>
+                        <p><span>Shipping</span><span>Rp 8,000</span></p>
+                        <p><span>Sales Tax</span><span>10%</span></p>
+                        <p class="cart-summary__total"><span>Total</span><span>Rp 668,000</span></p>
+                    </div>
+
+                    <div class="cart-summary__actions">
+                        <button type="button" class="cart-summary__button cart-summary__button--primary" data-open-order-form>CHECKOUT - Rp 668,000</button>
+                        <a href="./sunglasses.html" class="cart-summary__button cart-summary__button--secondary">CONTINUE SHOPPING</a>
+                    </div>
+                </aside>
+            </section>
+        </main>
+
+        <div class="order-overlay" data-order-overlay hidden>
+            <div class="order-overlay__backdrop" data-close-order-form></div>
+
+            <section class="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-form-title">
+                <div class="order-modal__header">
+                    <h2 id="order-form-title">order form</h2>
+                    <button type="button" class="order-modal__close" aria-label="Close order form" data-close-order-form>&times;</button>
+                </div>
+
+                <form class="order-form">
+                    <div class="order-form__notice">
+                        <span class="order-form__notice-icon">!</span>
+                        <p>This page is required</p>
+                    </div>
+
+                    <label class="order-form__field">
+                        <span>Name <strong>*</strong></span>
+                        <input type="text" name="customer-name" placeholder="Enter your name" maxlength="20" required>
+                    </label>
+
+                    <label class="order-form__field">
+                        <span>Email Address <strong>*</strong></span>
+                        <input type="email" name="customer-email" placeholder="customer.name@gmail.com" required>
+                    </label>
+
+                    <label class="order-form__field">
+                        <span>Phone Number <strong>*</strong></span>
+                        <input type="tel" name="customer-phone" placeholder="08xxxxxxxxxx" maxlength="12" required>
+                    </label>
+
+                    <label class="order-form__field">
+                        <span>Address <strong>*</strong></span>
+                        <textarea name="customer-address" placeholder="Enter your address" rows="4" required></textarea>
+                    </label>
+
+                    <label class="order-form__field">
+                        <span>Payment Method <strong>*</strong></span>
+                        <select name="payment-method" required>
+                            <option value="" selected disabled>Select</option>
+                            <option>Bank Transfer</option>
+                            <option>Credit Card</option>
+                            <option>Cash on Delivery</option>
+                        </select>
+                    </label>
+
+                    <label class="order-form__toggle">
+                        <span>GIFT WRAP</span>
+                        <input type="checkbox" name="gift-wrap">
+                    </label>
+
+                    <label class="order-form__toggle">
+                        <span>PRIORITY SHIPPING ?</span>
+                        <input type="checkbox" name="priority-shipping">
+                    </label>
+
+                    <div class="order-form__actions">
+                        <button type="submit" class="order-form__submit">Place Order</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <footer>
+            <p>Contact Us</p>
+            <p>Store Locator</p>
+            <p>Country : Indonesia</p>
+            <p>&copy; 2026 enVision</p>
+        </footer>
+
+        <script src="./cart.js"></script>
+    </body>
+</html>

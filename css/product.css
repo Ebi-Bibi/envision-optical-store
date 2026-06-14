@@ -1,0 +1,154 @@
+.hood-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 40px 60px;
+}
+
+.hood-detail {
+    display: grid;
+    grid-template-columns: minmax(0, 620px) minmax(280px, 360px);
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hood-image-panel {
+    width: 100%;
+    padding: 28px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+}
+
+.hood-image-panel img {
+    width: 100%;
+    height: 420px;
+    object-fit: scale-down;
+    display: block;
+}
+
+.hood-copy {
+    max-width: 360px;
+}
+
+.hood-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.hood-label {
+    margin: 0 0 12px;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.hood-copy h2 {
+    margin: 0 0 14px;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.hood-price {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sunnies-color {
+    justify-self: end;
+}
+
+.button-buy {
+    display: inline-block;
+    margin: 2px 0 20px;
+    padding: 15px 135px;
+    border: 1px solid #000;
+    border-radius: 500px;
+    background: #000;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.button-buy:hover {
+    background: #151515;
+    box-shadow: 0 10px 24px rgba(19, 18, 18, 0.35);
+    transform: translateY(-2px);
+}
+
+.button-buy:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
+}
+
+.button-buy p {
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.hood-copy p {
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.hood-copy > div:not(.button-buy),
+.hood-copy > p:not(.sunnies-color) {
+    text-align: left;
+}
+
+.sunnies-desc p {
+    margin: 0 0 6px;
+    font-size: 17px;
+    line-height: 1;
+}
+
+@media (max-width: 1200px) {
+    .hood-detail {
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+        gap: 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hood-shell {
+        padding: 28px 20px 40px;
+    }
+
+    .hood-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .hood-image-panel {
+        padding: 20px;
+    }
+
+    .hood-image-panel img {
+        height: 320px;
+    }
+
+    .hood-copy {
+        max-width: none;
+    }
+
+    .button-buy {
+        width: 100%;
+        padding: 15px 24px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .hood-copy h2 {
+        font-size: 22px;
+    }
+
+    .hood-price {
+        font-size: 16px;
+    }
+}
